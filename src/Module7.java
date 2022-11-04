@@ -22,8 +22,8 @@ public class Module7 {
 
 	/**
 	 * 
-	 * @param args
-	 * @throws IOException
+	 * @param args, main function
+	 * @throws IOException, throws exception 
 	 */
 	
 	public static void main(String[] args) throws  IOException {
@@ -69,7 +69,7 @@ public class Module7 {
 	//END OF MAIN*******************************************************************************************************************************
 
 	/**
-	 * 
+	 * @param word, single word with upper case or special values 
 	 * @return correctedWord, with no UpperCase or Special Values 
 	 */
 	public static String correctWord(String word) {
@@ -77,7 +77,7 @@ public class Module7 {
 		
 		correctedWord = word.toLowerCase().
 				replaceAll("\\!", " "). 
-				replaceAll("\\”", "")
+				replaceAll("\\,", "")
 				.replaceAll("\\“", "");
 		
 		return correctedWord;
@@ -85,9 +85,9 @@ public class Module7 {
 	
 	/**
 	 * 
-	 * @param textDocument
-	 * @return
-	 * @throws IOException
+	 * @param textDocument, name of text document program is looking for 
+	 * @return wordTree, frequency of words in text document 
+	 * @throws IOException, ignore input/output exception 
 	 */
 	public static TreeMap<String, Integer> countWords(String txtFile) throws  IOException{ 
 		
@@ -122,11 +122,11 @@ public class Module7 {
 	
 	/**
 	 * 
-	 * @param sortedByValue
-	 * @throws IOException
+	 * @param sortedByValue, 
+	 * 
 	 */
 	
-	public static void printWords(LinkedHashMap<String, Integer> sortedByValue) throws  IOException{ 
+	public static void printWords(LinkedHashMap<String, Integer> sortedByValue) { 
 		
 		System.out.println("Top 20 most common words: ");
 		System.out.println(" ");

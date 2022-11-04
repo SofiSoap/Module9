@@ -14,7 +14,7 @@ class countWordsTest {
 		try {
 			output = Module7.countWords("test.txt");
 			assertTrue(output.containsKey("test"));
-			assertTrue(output.containsValue(1));
+			assertTrue(output.containsValue(4));
 		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
